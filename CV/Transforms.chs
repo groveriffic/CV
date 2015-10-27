@@ -344,9 +344,7 @@ distanceTransform dtype maskSize source = unsafePerformIO $ do
                                   (fromIntegral . fromEnum $ dtype) 
                                   (fromIntegral . fromEnum $ maskSize)
                                    nullPtr nullPtr
-#ifdef OpenCV24
                                   (fromIntegral . fromEnum $ CCOMP)
-#endif
     return result
 
     -- TODO: Add handling for labels

@@ -1,3 +1,5 @@
+{-# LANGUAGE FlexibleContexts #-}
+
 module CV.ImageOp where
 
 import System.IO.Unsafe (unsafePerformIO)
@@ -22,6 +24,7 @@ img <# op = unsafeOperate op img
 
 blitOp img pos = ImgOp $ \i -> blit img i pos
 
+setPixelOp :: SetPixel (Image c d) => (Int, Int) -> SP (Image c d) -> ImageOperation c d
 setPixelOp pos v = ImgOp $ \i -> setPixel pos v i
 
 -- motivating example:

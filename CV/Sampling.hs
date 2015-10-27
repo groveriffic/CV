@@ -1,3 +1,4 @@
+{-# LANGUAGE FlexibleContexts, TypeFamilies #-}
 module CV.Sampling where
 
 import CV.Image

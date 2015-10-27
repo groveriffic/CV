@@ -1,3 +1,5 @@
+{-# LANGUAGE FlexibleContexts, TypeFamilies #-}
+
 module CV.Marking where
 
 import CV.Image as Image

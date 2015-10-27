@@ -349,7 +349,7 @@ loadColorImage8 = unsafeloadUsing imageTo8Bit 1
 instance Sized (MutableImage a b) where
     type Size (MutableImage a b) = IO (Int,Int)
    -- getSize :: (Integral a, Integral b) => Image c d -> (a,b)
-    getSize (Mutable i) = evaluate (deep (getSize i))
+    getSize (Mutable i) = evaluate (CV.Image.deep (getSize i))
 
 deep a = a `deepseq` a
 
